@@ -5,7 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import CollectionScreen from '../screens/CollectionScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -39,11 +39,11 @@ LinksStack.navigationOptions = {
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const CollectionStack = createStackNavigator({
+  Collection: CollectionScreen,
 });
 
-SettingsStack.navigationOptions = {
+CollectionStack.navigationOptions = {
   tabBarLabel: 'Collection',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -57,7 +57,7 @@ export default createBottomTabNavigator(
   {
     HomeStack,
     LinksStack,
-    SettingsStack,
+    CollectionStack,
   },
   {
     tabBarOptions: {
